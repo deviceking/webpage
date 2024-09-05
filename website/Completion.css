@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.light {
+    background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+    color: #000;
+}
+
+body.dark {
+    background: linear-gradient(to right, #0f0f0f, #2c3e50, #0f0f0f);
+    color: #fff;
+}
+
+.completion-container {
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    padding: 40px;
+}
+
+body.dark .completion-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.completion-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.completion-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.home-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-btn:hover {
+    background-color: #45a049;
+}
+
+.home-btn:focus {
+    outline: none;
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-toggle .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.theme-toggle .slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+.theme-toggle input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.theme-toggle input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.theme-toggle .slider.round {
+    border-radius: 34px;
+}
+
+.theme-toggle .slider.round:before {
+    border-radius: 50%;
+}
+
+#theme-label {
+    margin-left: 10px;
+}

@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.light {
+    background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+    color: #000;
+}
+
+body.dark {
+    background: linear-gradient(to right, #0f0f0f, #2c3e50, #0f0f0f);
+    color: #fff;
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark .quiz-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.quiz-header h1, .quiz-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.quiz-header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.start-btn, .next-btn, .prev-btn, .submit-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.start-btn:hover, .next-btn:hover, .prev-btn:hover, .submit-btn:hover {
+    background-color: #45a049;
+}
+
+.start-btn:focus, .next-btn:focus, .prev-btn:focus, .submit-btn:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.quiz-question {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 10px;
+    background-color: #4CAF50;
+    width: 0%;
+    border-radius: 5px;
+    transition: width 0.5s;
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong {
+    color: red;
+    font-weight: bold;
+}
+
+body.dark .correct {
+    color: lightgreen;
+}
+
+body.dark .wrong {
+    color: lightcoral;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-toggle .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.theme-toggle .slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+.theme-toggle input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.theme-toggle input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.theme-toggle .slider.round {
+    border-radius: 34px;
+}
+
+.theme-toggle .slider.round:before {
+    border-radius: 50%;
+}
+
+#theme-label {
+    margin-left: 10px;
+}
+
+.finish-btn {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+.finish-btn:hover {
+    background-color: #c62828;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.finish-btn {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.finish-btn:hover {
+    background-color: #c62828;
+}
+
+.finish-btn:focus {
+    outline: none;
+}
